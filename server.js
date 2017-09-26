@@ -27,13 +27,13 @@ passport.use(new GoogleStrategy({
 ));
 
 app.set('view engine', 'pug');
-app.set('views', + './views');
+app.set('views', './views');
 app.use(passport.initialize());
 app.use(passport.session());
 
 //app routes
 app.get('/', function(req, res){
-    res.render('index', { user: req.user });
+    res.render('first-view', { user: req.user });
 });
 
 app.get('/logged', function(req, res){
